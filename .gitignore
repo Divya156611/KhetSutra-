@@ -1,0 +1,38 @@
+# Environment files (never commit secrets)
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+frontend/.env.local
+frontend/.next/
+backend/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.sqlite3
+venv/
+.venv/
+env/
+dist/
+build/
+*.egg-info/
+
+# Node & Next.js
+node_modules/
+.next/
+out/
+coverage/
+
+# OS and Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

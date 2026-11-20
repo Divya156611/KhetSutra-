@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: kisanmitra-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    plan: starter
+    disk:
+      name: kisanmitra-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.11
+      - key: ENVIRONMENT
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:////var/data/khetsutra.db
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: DATA_GOV_IN_API_KEY
+        sync: false
