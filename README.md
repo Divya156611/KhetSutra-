@@ -2,8 +2,7 @@
 > **AI-Powered Farm Management & Agricultural Decision Support Platform for Indian Farmers**
 
 
-https://khetsutra.onrender.com
-
+khet-sutra.vercel.app
 
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI%200.110+-009688.svg)](https://fastapi.tiangolo.com/)
 [![Next.js 14](https://img.shields.io/badge/Frontend-Next.js%2014-black.svg)](https://nextjs.org/)
