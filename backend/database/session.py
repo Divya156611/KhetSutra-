@@ -18,7 +18,11 @@ engine = create_engine(
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
+
+class BaseMixin:
+    __table_args__ = {"extend_existing": True}
+
+Base = declarative_base(cls=BaseMixin)
 
 def get_db():
     db = SessionLocal()
